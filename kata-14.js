@@ -1,15 +1,15 @@
-const squareCode = function (message) {
+const squareCode = function(message) {
   let characters = message.split(' ').join('');
   let columns = Math.ceil(Math.sqrt(characters.length));
   let arr = [];
-  
+
   for (let i = 0; i < columns; i++) {
     for (let j = i; j < characters.length; j += columns) {
       arr.push(characters[j]);
     }
     arr.push(' ');
   }
-  return arr.join('')
+  return arr.join('');
 };
 
 console.log(squareCode("chill out"));

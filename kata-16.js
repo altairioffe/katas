@@ -1,14 +1,14 @@
-const blocksAway = function (directions) {
+const blocksAway = function(directions) {
   let facing;
   let eastCounter = 0;
   let northCounter = 0;
 
   if (directions[0] === 'left') {
     facing = 'N';
-    northCounter += directions[1]
+    northCounter += directions[1];
   } else {
     facing = 'E';
-    eastCounter += directions[1]
+    eastCounter += directions[1];
   }
 
   for (let i = 2; i < directions.length; i += 2) {
@@ -52,7 +52,7 @@ const blocksAway = function (directions) {
     }
   }
   return [eastCounter, northCounter];
-}
+};
 
 console.log(blocksAway(["right", 2, "left", 3, "left", 1]));
 console.log(blocksAway(["left", 1, "right", 1, "left", 1, "right", 1, "left", 1, "right", 1]));
