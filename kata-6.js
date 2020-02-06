@@ -7,9 +7,9 @@ let repeatNumbers = function(data) {
     if (data.length > 1 && i < data.length - 1) {
       newArr.push(', ');
     }
-  };
+  }
   return newArr.join('');
-}
+};
 
 console.log(repeatNumbers([[1, 10]]));
 console.log(repeatNumbers([[1, 2], [2, 3]]));
