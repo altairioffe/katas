@@ -1,4 +1,4 @@
-let calculateChange = function (total, cash) {
+let calculateChange = function(total, cash) {
   const cashMunny = {
     twenty: 2000,
     tenner: 1000,
@@ -9,7 +9,7 @@ let calculateChange = function (total, cash) {
     dime: 10,
     nickel: 5,
     penny: 1
-  }
+  };
   let totalChange = cash - total;
   let changeGiven = {};
 

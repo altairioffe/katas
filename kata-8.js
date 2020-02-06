@@ -1,4 +1,4 @@
-const multiplicationTable = function (maxValue) {
+const multiplicationTable = function(maxValue) {
   for (let i = 1; i <= maxValue; i++) {
     let arr = [];
     for (let j = 1; j <= maxValue; j++) {

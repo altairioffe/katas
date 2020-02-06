@@ -1,15 +1,15 @@
-const makeCase = function (string, rules) {
+const makeCase = function(string, rules) {
   let result = [];
   let style;
   let splitByWord = string.split(' ');
-  let splitByLetter = string.split('');;
+  let splitByLetter = string.split('');
   let arr = [];
-  const caseArr = ['camel', 'pascal', 'snake', 'kebab', 'title', 'vowel', 'consonant', 'upper', 'lower']
+  const caseArr = ['camel', 'pascal', 'snake', 'kebab', 'title', 'vowel', 'consonant', 'upper', 'lower'];
   let rulesArr = [];
   rulesArr.push(rules);
   let ruled = rulesArr.flat();
 
-  function runSwitch() {
+  const runSwitch = function() {
     switch (style) {
       case 'camel':
         arr.push(splitByWord[0][0] + splitByWord[0].slice(1));
@@ -56,9 +56,9 @@ const makeCase = function (string, rules) {
     return result;
   }
 
-  ruled.sort(function (a, b) {
+  ruled.sort(function(a, b) {
     return caseArr.indexOf(a) - caseArr.indexOf(b);
-  })
+  });
 
   for (let i = 0; i < ruled.length; i++) {
     style = ruled[i];

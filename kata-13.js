@@ -1,10 +1,10 @@
-const urlDecode = function (text) {
+const urlDecode = function(text) {
   let obj = {};
   let objectPairs = [];
   let stringToPairs = text.split('&');
 
-  for (let i = 0; i < stringToPairs.length; i++) {
-    objectPairs.push((stringToPairs[i].split('=')));
+  for (let i of stringToPairs) {
+    objectPairs.push((i.split('=')));
   }
   for (let i = 0; i < objectPairs.length; i++) {
     for (let j = 0; j < objectPairs[i].length; j++) {
@@ -13,7 +13,7 @@ const urlDecode = function (text) {
     obj[objectPairs[i][0]] = objectPairs[i][1];
   }
   return obj;
-}
+};
 console.log(urlDecode("duck=rubber"));
 console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
 console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain"));

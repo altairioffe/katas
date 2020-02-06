@@ -1,18 +1,18 @@
-const organizeInstructors = function (instructors) {
+const organizeInstructors = function(instructors) {
   let organized = {};
   let names = [];
   let courses = [];
   let filteredCourses = [];
 
-  instructors.forEach(x => courses.push(x.course))
+  instructors.forEach(x => courses.push(x.course));
   filteredCourses = [...new Set(courses)];
-  filteredCourses.forEach(function (x) {
+  filteredCourses.forEach(function(x) {
     organized[x] = names;
-    instructors.forEach(y => y.course === x ? names.push(y.name) : '')
+    instructors.forEach(y => y.course === x ? names.push(y.name) : '');
     names = [];
-  })
+  });
   return organized;
-}
+};
 
 console.log(organizeInstructors([
   { name: "Samuel", course: "iOS" },
